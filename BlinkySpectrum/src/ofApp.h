@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxFft.h"
 #include "ofxGui.h"
+#include "ofxSyphonServer.h"
 
 class ofApp : public ofBaseApp{
 
@@ -41,9 +42,12 @@ class ofApp : public ofBaseApp{
         ofParameter<float> huePhase;
         ofParameter<float> hueRange;
     
+        ofParameter<int> verticalBoxes;
+    
         ofxPanel gui;
     
         ofxFft* fft;
+        ofxSyphonServer syphonServer;
     
         float* audioInput;
         float* fftOutput;
