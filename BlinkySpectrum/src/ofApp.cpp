@@ -23,7 +23,7 @@ void ofApp::setup(){
     gui.add(averages.set("averages", 9, 1, maxAverages));
     gui.add(huePhase.set("huePhase", .5, 0, 2*pi));
     gui.add(hueRange.set("hueRange", .025, 0, .5));
-    gui.add(verticalBoxes.set("verticalBoxes", 1, 10, 20));
+    gui.add(verticalBoxes.set("verticalBoxes", 15, 1, 30));
     
     syphonServer.setName("Blinky Spectogram");
 }
@@ -49,7 +49,6 @@ void ofApp::draw(){
     float binDispalyWidth = ((float)ofGetWidth())/binsOfInterest;
     float binColumnHeight = ofGetHeight();
     
-    int verticalBoxes = 10;
     float binHeight = binColumnHeight/verticalBoxes;
     
     for(int i = startingBin; i < endingBin; i++) {
